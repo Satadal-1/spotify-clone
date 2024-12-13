@@ -3,15 +3,16 @@
   padding: 0;
 }
 
-body{
-    background-color: black;
-    color: white;
+body {
+  background-color: black;
+  color: white;
 }
 .left {
   width: 25vw;
 }
 .right {
   width: 75vw;
+  position: relative;
 }
 .home ul li {
   display: flex;
@@ -37,42 +38,95 @@ body{
   min-height: 80vh;
   position: relative;
 }
-.footer{
-    display: flex;
-    font-size: 10px;
-    gap: 13px;
-    position: absolute;
-    bottom: 0;
+.footer {
+  display: flex;
+  font-size: 10px;
+  gap: 13px;
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
 }
-.footer a{
-    color: grey;
-    
+.footer a {
+  color: grey;
 }
-.header{
-    display: flex;
-    justify-content: space-between;
-    background-color: #282727;
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #282727;
 }
-.header  > *{
-    padding: 20px;
+.header > * {
+  padding: 20px;
+  height: 38px;
 }
-.cardContainer{
-    margin: 30px;
-    display: flex;
-    gap: 10px;
+.cardContainer {
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap onto new rows */
+  gap: 10px; /* Space between cards */
+  justify-content: space-around; /* Distribute cards evenly */
+  max-width: 70vh;
+  overflow-y: scroll;
 }
- .card{
-    width: 200px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #282727;
+.card {
+  flex: 1 1 calc(200px - 10px); /*Each card takes up space proportionally */
+  max-width: 200px; /* Ensure cards don’t grow too large */
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #282727;
+  position: relative;
 }
-.card > *{
-    padding-top: 3px;
+.card > * {
+  padding-top: 3px;
 }
-.card img{
-    width: 100%;
-    object-fit: contain;
+.card img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.play {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 17px;
+  top: 153px;
+  opacity: 0;
+  transition: all ease-out;
+}
+.buttons > * {
+  margin: 0 12px;
+}
+.signupbtn {
+  color: rgb(123, 123, 123);
+  background-color: #282727;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.signupbtn:hover {
+  font-size: 17px;
+  color: white;
+}
+.loginbtn {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 36px;
+  padding: 10px;
+  width: 68px;
+  border: none;
+}
+.loginbtn:hover {
+  font-weight: bold;
+  font-size: 17px;
+  
+}
+.playbar{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: greenyellow;
 }
 /* .home{
     padding: 10px;
