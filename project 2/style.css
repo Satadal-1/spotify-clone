@@ -111,7 +111,7 @@ body {
   color: black;
   background-color: white;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 15px;
   border-radius: 36px;
   padding: 10px;
   width: 68px;
@@ -119,14 +119,26 @@ body {
 }
 .loginbtn:hover {
   font-weight: bold;
-  font-size: 17px;
+  font-size: 16px;
   
 }
 .playbar{
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: greenyellow;
+  background-color: rgb(250, 250, 250);
+}
+.songbuttons   {
+  display: flex;
+  justify-content: center;
+  height: 23px;
+  padding: 5px;
+}
+.songlist ul {
+  padding: 0 42px;
+}
+.songlist ul li{
+  list-style-type: disc;
 }
 /* .home{
     padding: 10px;
