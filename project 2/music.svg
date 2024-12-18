@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="40" height="40">
+  <!-- Header Line -->
+  <line x1="20" y1="20" x2="80" y2="20" stroke="black" stroke-width="5" />
+  
+  <!-- Shorter, more curved vertical line -->
+  <path d="M40 20 C30 40, 25 60, 20 70" stroke="black" stroke-width="5" fill="none" />
+  <ellipse cx="20" cy="80" rx="8" ry="12" fill="black" />
+
+  <!-- Taller, more curved vertical line -->
+  <path d="M70 20 C60 50, 55 75, 50 90" stroke="black" stroke-width="5" fill="none" />
+  <ellipse cx="50" cy="100" rx="8" ry="12" fill="black" />
+</svg>
+
