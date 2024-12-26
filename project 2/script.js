@@ -6,7 +6,7 @@ async function getSongs() {
   let div = document.createElement("div");
   div.innerHTML = response;
   let as = div.getElementsByTagName("a");
-  console.log(as)
+  console.log(as);
   
   let songs = [];
   for (let index = 0; index < as.length; index++) {
@@ -20,10 +20,10 @@ async function getSongs() {
 async function main() {
   let songs = await getSongs()
   console.log(songs);
-  let songUL =document.querySelector(".songList").getElementsByTagName("ul")[0]
+  let songUL =document.querySelector(".songList").getElementsByTagName("ul")[0];
+  //show all the songs in playlist
   for (const song of songs) {
     songUL.innerHTML = songUL.innerHTML + `<li>
-    
                 <img class="invert" width="34" src="music.svg" alt="">
                 <div class="info">
                     <div> ${song.replaceAll("%20"," ")}</div>
@@ -32,10 +32,7 @@ async function main() {
                 <div class="playnow">
                     <span>Play Now</span>
                     <img class="invert" src="playbar.svg" alt="">
-                </div>
-               
-    
-    </li>`;
+                </div> </li>`;
   }
   //play the first song
   var audio = new Audio(songs[0]);
