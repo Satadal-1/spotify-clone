@@ -135,13 +135,15 @@ body {
   justify-content: center;
   height: 23px;
   padding: 5px;
+  cursor: pointer;
 }
-.songlist ul {
+.songList ul {
   padding: 0 4px;
 }
 .songList {
   height: 544px;
-  overflow: auto;
+  overflow-y: auto;
+  scrollbar-width:none;
   margin-bottom: 44px ;
 }
 
@@ -183,6 +185,7 @@ body {
   position: absolute;
   bottom: 0;
   margin: 6px;
+  cursor: pointer;
 }
 .circle{
   height: 14px;
@@ -195,4 +198,11 @@ body {
   left: 0%;
   transition: left 0.5s;
 
+}
+.songinfo, .songtime{
+  color: black;
+}
+.abovebar{
+  display: flex;
+  justify-content: space-between;
 }
