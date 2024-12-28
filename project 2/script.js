@@ -96,7 +96,17 @@ play.addEventListener("click", () => {
 
   //Add an event listner to seekbar
   document.querySelector(".seekbar").addEventListener("click",e =>{
-    document.querySelector(".circle").style.left = (e.offsetX/e.target.getBoundingClientRect().width) * 100 + "%";
+    let percent = (e.offsetX/e.target.getBoundingClientRect().width)
+    document.querySelector(".circle").style.left = percent * 100 + "%";
+    currentSong.currentTime =  (percent / currentSong.duration) * 100;
+  })
+  //add a event listner to hamburger
+  document.querySelector(".hamburger").addEventListener("click", ()=>{
+    document.querySelector(".left").style.left = "0";
+  })
+  //add a event listner to close button
+  document.querySelector(".close").addEventListener("click", ()=>{
+    document.querySelector(".left").style.left = "-120%";
   })
 
 main();
