@@ -94,6 +94,7 @@ async function displayAlbums() {
                     <img src="http://127.0.0.1:3000/project%202/songs/${folder}/cover.jpg" alt="">
                     <h2>${metadata.title}</h2>
                     <p>${metadata.description}</p>
+                </div>
                 </div>`;
         }
     }

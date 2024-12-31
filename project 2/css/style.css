@@ -73,7 +73,7 @@ body {
   
   gap: 10px; /* Space between cards */
   justify-content: space-around; /* Distribute cards evenly */
-  max-width: 60vh;
+  max-height: 60vh;
   overflow-y: auto;
 }
 .card {
@@ -110,7 +110,7 @@ body {
   right: 17px;
   top: 153px;
   opacity: var(--a);
-  transition: all ease-out;
+  transition: all ease-out 1s;
 }
 .buttons > * {
   margin: 0 12px;
