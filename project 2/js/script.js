@@ -68,7 +68,7 @@ const playMusic = (track, pause = false) => {
 // Function to display albums
 async function displayAlbums() {
     console.log("Displaying albums");
-    let response = await fetch(`http://127.0.0.1:3000/project%202/songs/`);
+    let response = await fetch(`/songs/`);
     let html = await response.text();
 
     let div = document.createElement("div");
